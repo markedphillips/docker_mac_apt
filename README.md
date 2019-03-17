@@ -8,7 +8,7 @@ searches..) The framework does the heavy lifting, parsing of disk/volume image a
 formats. There is an API which plugins can use to access files and folders within the disk image. Currently DD and E01 images are supported. DMG files without compression work too. You
 can use a mounted image too (with limited support on windows for this feature). We even put in a native HFS parser adding support for lzvn/lzfse compressed files.
 
-[swiftforensics]macOS Artifact Parsing Tool https://swiftforensics.com [mac_apt]https://github.com/ydkhatri/mac_apt
+macOS Artifact Parsing Tool https://swiftforensics.com/https://github.com/ydkhatri/mac_apt
 
 Built for arm7hf and x86-64 pull the image with:
 
@@ -19,7 +19,7 @@ docker pull markephillips/mac_apt:arm7hf
 or clone this repository:
 
 ```bash
-git clone https://github.com/markedphillips/mac_apt/edit
+git clone https://github.com/markedphillips/docker_mac_apt/
 docker build --tag mac_apt .
 ```
 
@@ -35,8 +35,6 @@ Now easy sailing to use the tool..
 ```bash
 mac_apt -h
 ```
-
-
 
 #### _New in mac_apt - A native APFS parser to parse HighSierra images, plugins for spotlight and fsevents._
 
