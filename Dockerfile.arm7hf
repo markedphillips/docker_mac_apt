@@ -1,4 +1,4 @@
-FROM arm32v7/ubuntu
+FROM arm32v7/debian:stretch-slim
 MAINTAINER Mark Phillips (mark.phillips@gmail.com)
 RUN apt-get update && apt-get install -y \
  apt-utils \
@@ -20,7 +20,9 @@ RUN apt-get update && apt-get install -y \
  tar \
  wget \
  zip \
- zlib1g-dev
+ zlib1g-dev \
+&& rm -rf /var/lib/apt/lists/*
+
 RUN pip install --upgrade pip
 RUN pip install biplist tzlocal construct==2.8.10 xlsxwriter enum34 kaitaistruct pkipplib lz4
 RUN pip install pytsk3==20170802
@@ -34,9 +36,8 @@ RUN python setup.py install
 
 WORKDIR /
 RUN echo "move in libewf-20140802.tar.gz"
-COPY libewf-20140802.tar.gz .
+RUN wget https://github.com/libyal/libewf-legacy/releases/download/20140802/libewf-20140802.tar.gz
 RUN tar xvzf libewf-20140802.tar.gz
-
 WORKDIR libewf-20140802
 RUN  ./configure --enable-python
 RUN make install
