@@ -1,4 +1,5 @@
-# Dockerized mac_apt (arm7hf and x86-64) - macOS Artifact Parsing Tool
+# Dockerized mac_apt (arm7hf and x86-64)
+macOS Artifact Parsing Tool
 
 mac_apt is a tool to process Mac computer full disk images and extract data/metadata useful for forensic investigation. It is designed to be cross-platform and uses python libraries that
 work across mac, linux and windows. Even more so now that it is in a docker container.
