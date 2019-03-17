@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM phusion/baseimage
 MAINTAINER Mark Phillips (mark.phillips@gmail.com)
 RUN apt-get update && apt-get install -y \
  apt-utils \
