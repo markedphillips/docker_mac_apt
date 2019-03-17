@@ -9,7 +9,9 @@ searches..) The framework does the heavy lifting, parsing of disk/volume image a
 formats. There is an API which plugins can use to access files and folders within the disk image. Currently DD and E01 images are supported. DMG files without compression work too. You
 can use a mounted image too (with limited support on windows for this feature). We even put in a native HFS parser adding support for lzvn/lzfse compressed files.
 
-macOS Artifact Parsing Tool https://swiftforensics.com/https://github.com/ydkhatri/mac_apt
+macOS Artifact Parsing Tool 
+github https://github.com/ydkhatri/mac_apt
+blog https://swiftforensics.com
 
 Built for arm7hf and x86-64 pull the image with:
 
