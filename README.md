@@ -1,7 +1,7 @@
 # Dockerized mac_apt (arm7hf and x86-64)
 Dockerized macOS Artifact Parsing Tool
 
-Below are the relevant links to the main project. The macOS Artifact Parsing Tool Docker image gets you to the commandline with mac_apt in four lines, the below example adds a system alias for future simplicity. Typically, an instagratification path for acquiring mac_apt on an arm7hf system would look like this.
+Below are the relevant links to the main project. The macOS Artifact Parsing Tool Docker image gets you to the commandline with mac_apt in four lines, the below example adds a system alias for future simplicity. Typically, an instagratification path for acquiring mac_apt on an arm7hf system would look like this:
 
 ```bash
 git clone https://github.com/markedphillips/docker_mac_apt/
