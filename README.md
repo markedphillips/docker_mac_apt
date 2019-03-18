@@ -25,6 +25,8 @@ macOS Artifact Parsing Tool
 github https://github.com/ydkhatri/mac_apt
 blog https://swiftforensics.com
 
+Be sure to check DockerHub for latest versioning. https://cloud.docker.com/u/markephillips/repository/docker/markephillips/mac_apt
+
 Built for arm7hf and x86-64 pull the image with:
 
 Installation
