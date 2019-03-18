@@ -11,7 +11,7 @@ echo "alias mac_apt='docker run --rm -v '$(pwd):/home/docker' mac_apt'" >> ~/.ba
 source ~/.bashrc
 mac_apt -h
 ```
-Of course, there was some simple set up for future docker runs with regards to the aliasing.  The vanilla Dockerfile uses phusion/baseimage-docker, its been tested with ubuntu and a few other variants at attempt to reduce comtainer size. 
+Of course, there was some simple set up for future docker runs with regards to the aliasing.  The vanilla Dockerfile uses phusion/baseimage-docker, its been tested with ubuntu and a few other variants at an attempt to reduce comtainer size. 
 
 mac_apt is a tool to process Mac computer full disk images and extract data/metadata useful for forensic investigation. It is designed to be cross-platform and uses python libraries that
 work across mac, linux and windows. Even easier now that it is in a docker container.
