@@ -1,5 +1,17 @@
 # Dockerized mac_apt (arm7hf and x86-64)
-macOS Artifact Parsing Tool
+Dockerized macOS Artifact Parsing Tool
+
+Below are the relevant links to the main project. All I did was wrap it up in Docker so that you could basically run the mac_apt in as few lines as possible. Below is one such instagratification path for arm7hf systems.
+
+```bash
+git clone https://github.com/markedphillips/docker_mac_apt/
+cd docker_mac_apt
+docker build -f Dockerfile.arm7hf --tag mac_apt .
+echo "alias mac_apt='docker run --rm -v '$(pwd):/home/docker' mac_apt'" >> ~/.bashrc
+source ~/.bashrc
+mac_apt -h
+```
+Of course, there was some simple set up for future docker runs. 
 
 mac_apt is a tool to process Mac computer full disk images and extract data/metadata useful for forensic investigation. It is designed to be cross-platform and uses python libraries that
 work across mac, linux and windows. Even more so now that it is in a docker container.
@@ -23,10 +35,12 @@ or clone this repository:
 
 ```bash
 git clone https://github.com/markedphillips/docker_mac_apt/
-docker build --tag mac_apt .
+docker build -f Dockerfile.arm7hf --tag mac_apt .
 ```
 
-After building the image. Its easy to tag and alias to the larger Docker command. Or chmod +x on docker_alias.sh from the pull and run. 
+Remember above is for armhf and removing "-f Dockerfile.armhf" for x86-64. 
+
+After building the image. Its easy to tag (to something else) and alias to hide the larger Docker command. (Or if you want to just chmod +x on docker_alias.sh and run.) 
 
 ```bash
 docker tag mac_apt:latest mac_apt
