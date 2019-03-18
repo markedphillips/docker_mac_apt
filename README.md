@@ -26,7 +26,7 @@ git clone https://github.com/markedphillips/docker_mac_apt/
 docker build --tag mac_apt .
 ```
 
-After building the image. Its easy to tag and aliase to the larger Docker command.
+After building the image. Its easy to tag and alias to the larger Docker command. Or chmod +x on docker_alias.sh from the pull and run. 
 
 ```bash
 docker tag mac_apt:latest mac_apt
