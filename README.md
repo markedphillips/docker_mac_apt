@@ -1,7 +1,7 @@
 # Dockerized mac_apt (arm7hf and x86-64)
 Dockerized macOS Artifact Parsing Tool
 
-Below are the relevant links to the main project. All I did was wrap it up in Docker so that you could basically run the mac_apt in as few lines as possible. Below is one such instagratification path for arm7hf systems.
+Below are the relevant links to the main project. The macOS Artifact Parsing Tool Docker image gets you to the commandline with mac_apt in four lines, the below example adds a system alias for future simplicity. Typically, an instagratification path for acquiring mac_apt on an arm7hf system would look like this.
 
 ```bash
 git clone https://github.com/markedphillips/docker_mac_apt/
@@ -11,10 +11,10 @@ echo "alias mac_apt='docker run --rm -v '$(pwd):/home/docker' mac_apt'" >> ~/.ba
 source ~/.bashrc
 mac_apt -h
 ```
-Of course, there was some simple set up for future docker runs. 
+Of course, there was some simple set up for future docker runs with regards to the aliasing.  The vanilla Dockerfile uses phusion/baseimage-docker, its been tested with ubuntu and a few other variants at attempt to reduce comtainer size. 
 
 mac_apt is a tool to process Mac computer full disk images and extract data/metadata useful for forensic investigation. It is designed to be cross-platform and uses python libraries that
-work across mac, linux and windows. Even more so now that it is in a docker container.
+work across mac, linux and windows. Even easier now that it is in a docker container.
 
 mac_apt is a python based framework, which has plugins to process individual artifacts (such as Safari internet history, Network interfaces, Recently used files, Spotlight typed
 searches..) The framework does the heavy lifting, parsing of disk/volume image and offers a unified output interface, which currently supports writing out data as CSV, Sqlite and Excel
